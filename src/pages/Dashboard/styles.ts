@@ -29,6 +29,12 @@ export const Card = styled.div`
   border-radius: 5px;
   color: ${({ total }: CardProps): string => (total ? '#fff' : '#363F5F')};
 
+  transition: transform 0.5s;
+
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-10px);
+  }
   header {
     display: flex;
     align-items: center;
@@ -90,6 +96,14 @@ export const TableContainer = styled.section`
 
     td:last-child {
       border-radius: 0 8px 8px 0;
+    }
+  }
+  tr {
+    transition: transform 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateX(-10px);
     }
   }
 `;
